@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DENF FASHION — Loja de Roupas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#inicio">DENF <span>FASHION</span></a>
+  <nav>
+    <a href="#inicio">Início</a><a href="#produtos">Produtos</a><a href="#marcas">Marcas</a><a href="#sobre">Sobre</a><a href="#contacto">Contacto</a>
+  </nav>
+  <button class="cart-btn" onclick="abrirCarrinho()">🛒 <b id="contador">0</b></button>
+</header>
+
+<section id="inicio" class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">DENF FASHION • MOÇAMBIQUE</p>
+    <h1>Estilo que<br><span>fala por ti.</span></h1>
+    <p>Roupas, calçados e acessórios selecionados para o teu estilo.</p>
+    <a class="btn" href="#produtos">Ver coleção</a>
+  </div>
+  <div class="hero-card">
+    <div>NEW<br><strong>COLLECTION</strong></div>
+  </div>
+</section>
+
+<section id="produtos" class="section">
+  <div class="heading"><p class="eyebrow">CATÁLOGO</p><h2>Escolhe o teu estilo</h2><p>Produtos organizados por categoria e marca.</p></div>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="produtos-grid"></div>
+</section>
+
+<section id="marcas" class="brands">
+  <div class="heading"><p class="eyebrow">MARCAS VISÍVEIS</p><h2>Algumas marcas do catálogo</h2></div>
+  <div class="brand-list"><span>PUMA</span><span>LACOSTE</span><span>POLO RALPH LAUREN</span><span>NIKE</span></div>
+  <p class="brand-note">Quando a marca não está visível na fotografia, o produto é identificado como “Marca não visível”.</p>
+</section>
+
+<section id="sobre" class="about">
+  <div class="about-inner">
+    <p class="eyebrow">SOBRE A DENF FASHION</p>
+    <h2>Moda simples, moderna e com personalidade.</h2>
+    <p>A DENF FASHION reúne roupas, calçados e acessórios para diferentes estilos. Escolhe o produto, adiciona ao carrinho e envia o pedido diretamente pelo WhatsApp.</p>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="heading"><p class="eyebrow">CONTACTO</p><h2>Fala connosco</h2></div>
+  <div class="contacts">
+    <a href="https://wa.me/258870103321" target="_blank">📱 87 010 3321</a>
+    <a href="https://wa.me/258845403321" target="_blank">📱 84 540 3321</a>
+  </div>
+  <p>Atendimento e pedidos pelo WhatsApp.</p>
+</section>
+
+<footer>© 2026 DENF FASHION — Todos os direitos reservados.</footer>
+
+<div id="carrinho" class="modal">
+  <div class="cart-box">
+    <button class="close" onclick="fecharCarrinho()">×</button>
+    <h2>O teu carrinho</h2>
+    <div id="itens-carrinho"></div>
+    <div class="total">Total: <span id="total">0 MT</span></div>
+    <div class="number-choice">
+      <p>Enviar pedido para:</p>
+      <button onclick="finalizarWhatsApp('258870103321')">87 010 3321</button>
+      <button onclick="finalizarWhatsApp('258845403321')">84 540 3321</button>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
